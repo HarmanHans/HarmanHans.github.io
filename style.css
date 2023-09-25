@@ -1,0 +1,83 @@
+:root {
+    --main-color: #000000;
+    --font-darkbg: #ffffff;
+    --yellow: #FDFD96;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--main-color);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+header.scroll {
+    position: fixed;
+    top: -4rem;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: var(--main-color);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    width: 50%;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: var(--font-darkbg);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav__item a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: var(--yellow);
+    transition: width 0.3s;
+}
+
+.nav__item a:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80%;
+    background-color: var(--main-color);
+}
+
+.section__title--intro {
+    font-size: 100px;
+    color: var(--font-darkbg);
+    position: absolute;
+    top: 100px;
+}
