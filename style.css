@@ -3,6 +3,7 @@
     --font-darkbg: #ffffff;
     --yellow: #FDFD96;
     --ff-primary: "Poppins", sans-serif;
+    --pink: #F1AFED;
 }
 
 * {
@@ -13,6 +14,15 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--main-color);
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -45,10 +55,6 @@ header.scroll {
     width: 50%;
 }
 
-.logo {
-    position: relative;
-    margin: 0;
-}
 
 .nav__list {
     display: flex;
@@ -56,15 +62,18 @@ header.scroll {
     justify-content: space-around;
 }
 
-.nav__item a {
+.nav__link, .nav__button {
     text-decoration: none;
-    color: var(--font-darkbg);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.9rem;
 }
 
-.nav__item a::after { 
+.nav__link {
+    color: var(--font-darkbg);
+}
+
+.nav__link::after { 
     content: '';
     display: block;
     width: 0;
@@ -73,7 +82,7 @@ header.scroll {
     transition: width 0.3s;
 }
 
-.nav__item a:hover::after {
+.nav__link:hover::after {
     width: 100%;
     transition: width 0.3s;
 }
@@ -99,8 +108,45 @@ header.scroll {
     color: var(--font-darkbg);
 }
 
+.logo p {
+    text-align: left;
+}
+
+.nav__button {
+    font-weight: 600;
+    background: var(--font-darkbg);
+    color: var(--main-color);
+    border-radius: 50px;
+    border: 0px solid #fff;
+    padding: 5px;
+}
+
+.nav__button:hover {
+    background: linear-gradient(90deg, #e0a5ca, #3960b6, #ffeb3b, #03a9f4);
+    background-size: 450%;
+    color: var(--font-darkbg);
+    animation: animate 8s linear infinite;
+}
+
 .hide {
     display: none !important;
+}
+
+.links {
+    position: fixed;
+    top: 75%;
+    left: 2%;
+    z-index: 800;
+    list-style: none;
+}
+
+.links__item {
+    margin-bottom: .75rem;
+}
+
+.links__item img {
+    max-height: 2.2rem;
+    max-width: 2.2rem;
 }
 
 @media (max-width: 630px) {
@@ -126,6 +172,7 @@ header.scroll {
         text-align: center;
         top: 100%;
         width: 100%;
+        min-width: 100%;
         height: 200%;
         left: 0;
         flex-direction: column;
@@ -143,18 +190,36 @@ header.scroll {
     }
 
     .nav__item {
-        padding-bottom: .55rem;
+        padding-bottom: .85rem;
     }
 
-    .navbar a {
+    .nav__link {
         background: var(--main-color);
+    }
+
+    .logo {
+        position: relative;
+        margin: 0;
+    }
+
+    .nav__button {
+        padding: 4px;
+        background: var(--font-darkbg);
+        color: var(--main-color);
+    }
+}
+
+@media (min-width: 631px) and (max-width: 1000px) {
+    .navbar {
+        left: 30%;
+        width: 70%;
     }
 }
 
 .intro {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 8%;
     height: 100vh;
     width: 80%;
     background-color: var(--main-color);
@@ -173,6 +238,10 @@ header.scroll {
         --fs-h2: 3.75rem;
         --fs-h3: 1.5rem;
         --fs-body:1.125rem;
+    }
+
+    .links {
+        position: absolute;
     }
 
 }

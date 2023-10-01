@@ -11,6 +11,10 @@ window.onscroll = function() {
     prevScrollPos = currentScrollPos;
 }
 
+window.addEventListener('resize', function() {
+    window.innerWidth > 630 ? navBar.classList.remove('hide') : navBar.classList.add('hide');
+});
+
 navToggle.addEventListener('click', () =>  {
     navBar.classList.toggle('hide');
 });
