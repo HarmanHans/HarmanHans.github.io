@@ -20,9 +20,13 @@ html, body {
     margin: 0;
     padding: 0;
     background: var(--main-color);
-    display: flex;
     width: 100%;
     height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -140,13 +144,17 @@ header.scroll {
     list-style: none;
 }
 
-.links__item {
+.links__item, .links__footer--item {
     margin-bottom: .75rem;
 }
 
-.links__item img {
+.links__item img, .links__footer--item img {
     max-height: 2.2rem;
     max-width: 2.2rem;
+}
+
+.links__footer {
+    display: none;
 }
 
 @media (max-width: 630px) {
@@ -216,8 +224,22 @@ header.scroll {
     }
 }
 
+@media (max-width: 800px) {
+    .links {
+        display: none;
+    }
+
+    .links__footer, .links__footer--item {
+        display: inline-block;
+        align-self: center;
+    }
+    .links__footer {
+        position: relative;
+    }
+}
+
 .intro {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 8%;
     height: 100vh;
@@ -239,11 +261,6 @@ header.scroll {
         --fs-h3: 1.5rem;
         --fs-body:1.125rem;
     }
-
-    .links {
-        position: absolute;
-    }
-
 }
 
 img {
