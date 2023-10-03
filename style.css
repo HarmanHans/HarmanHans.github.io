@@ -148,6 +148,14 @@ header.scroll {
     margin-bottom: .75rem;
 }
 
+.links__item:hover {
+    transform: translate(10px);
+}
+
+.links__footer--item:hover {
+    transform: translateY(-10px);
+}
+
 .links__item img, .links__footer--item img {
     max-height: 2.2rem;
     max-width: 2.2rem;
@@ -224,7 +232,7 @@ header.scroll {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 865px) {
     .links {
         display: none;
     }
@@ -233,8 +241,10 @@ header.scroll {
         display: inline-block;
         align-self: center;
     }
-    .links__footer {
+
+    .links__footer--item {
         position: relative;
+        margin-right: 1rem;
     }
 }
 
