@@ -4,6 +4,7 @@
     --yellow: #FDFD96;
     --ff-primary: "Poppins", sans-serif;
     --pink: #F1AFED;
+    --powder-blue: #66F5FF;
 }
 
 * {
@@ -35,7 +36,7 @@ header {
     left: 0;
     width: 100%;
     height: 4rem;
-    background-color: var(--main-color);
+    background: #0e0d0d;
     text-align: center;
     z-index: 1;
     transition: 0.5s;
@@ -250,6 +251,7 @@ header.scroll {
 
 .intro {
     position: relative;
+    display: flex;
     top: 0;
     left: 8%;
     height: 100vh;
@@ -262,6 +264,65 @@ header.scroll {
     color: var(--font-darkbg);
     position: absolute;
     top: 100px;
+}
+
+.section__title {
+    font-size: 70px;
+    position: absolute;
+}
+
+.section__title--heading {
+    color: var(--font-darkbg);
+    top: 290px;
+    left: 70px;
+}
+
+.section__title--style {
+    color: var(--powder-blue);
+    top: 290px;
+    left: 190px;
+}
+
+.quick-bio {
+    position: absolute;
+    color: var(--font-darkbg);
+    top: 430px;
+    left: 70px;
+}
+
+.about-me {
+    color: var(--font-darkbg);
+    position: absolute;
+    top: 630px;
+    left: 220px;
+    height: 100vh;
+    width: 80%;
+}
+
+/*.section__title--aboutme {
+    animation: typing;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
+}*/
+
+.section__title--aboutme::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background: var(--ff-primary);
+    border-left: 2px solid var(--yellow);
+    animation: typing 1.5s steps(9);
+    z-index: 999;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -45px 0 5px;
+    }
 }
 
 @media (min-width: 800px) {
