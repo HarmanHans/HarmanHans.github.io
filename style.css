@@ -273,13 +273,13 @@ header.scroll {
 
 .section__title--heading {
     color: var(--font-darkbg);
-    top: 290px;
+    top: 270px;
     left: 70px;
 }
 
 .section__title--style {
     color: var(--powder-blue);
-    top: 290px;
+    top: 270px;
     left: 190px;
 }
 
@@ -296,6 +296,21 @@ header.scroll {
     top: 630px;
     left: 220px;
     height: 100vh;
+    width: 80%;
+}
+
+.about-me__long-bio {
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    width: 80%;
+}
+
+.projects {
+    color: var(--font-darkbg);
+    position: absolute;
+    top: 930px;
+    left: 220px;
     width: 80%;
 }
 
