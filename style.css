@@ -140,7 +140,7 @@ header.scroll {
 .links {
     position: fixed;
     top: 75%;
-    left: 2%;
+    left: 20px;
     z-index: 800;
     list-style: none;
 }
@@ -157,7 +157,7 @@ header.scroll {
     transform: translateY(-10px);
 }
 
-.links__item img, .links__footer--item img {
+.links__item img, .links__footer--item img, .project-links {
     max-height: 2.2rem;
     max-width: 2.2rem;
 }
@@ -294,7 +294,7 @@ header.scroll {
     color: var(--font-darkbg);
     position: absolute;
     top: 630px;
-    left: 220px;
+    left: 15%;
     height: 100vh;
     width: 80%;
 }
@@ -310,9 +310,26 @@ header.scroll {
     color: var(--font-darkbg);
     position: absolute;
     top: 930px;
-    left: 220px;
+    left: 15%;
     width: 80%;
 }
+
+.projects__grid {
+    list-style: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+}
+
+.project-display, .project-display img {
+    max-width: 750px;
+}
+
+.projects_grid_item {
+    margin-bottom: 50px;
+}
+
 
 /*.section__title--aboutme {
     animation: typing;
