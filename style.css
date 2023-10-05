@@ -40,7 +40,7 @@ header {
     height: 4rem;
     background: var(--alt-main-color);
     text-align: center;
-    z-index: 1;
+    z-index: 999;
     transition: 0.5s;
 }
 
@@ -168,6 +168,45 @@ header.scroll {
     display: none;
 }
 
+.contact {
+    position: absolute;
+    top: 310vh;
+    width: 80%;
+    height: 100vh;
+    left: 20%;
+}
+
+.section__title--contact {
+    color: var(--font-darkbg);
+    left: 30%;
+}
+
+.contact-notes {
+    position: absolute;
+    color: var(--font-darkbg);
+    top: 18%;
+    left: 12%;
+}
+
+.contact-mail {
+    position: absolute;
+    text-decoration: none;
+    color: var(--font-darkbg);
+    top: 28%;
+    left: 40%;
+    border: 2px solid var(--powder-blue);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.contact-mail:hover {
+    translate: -2px;
+    box-shadow: 0px 1px 2px 0px var(--powder-blue),
+            1px 2px 4px 0px var(--powder-blue),
+            2px 4px 8px 0px var(--pink),
+            2px 4px 16px 0px var(--powder-blue);
+}
+
 @media (max-width: 630px) {
     .nav-toggle {
         display: flex;
@@ -243,6 +282,7 @@ header.scroll {
     .links__footer, .links__footer--item {
         display: inline-block;
         align-self: center;
+        top: 320vh;
     }
 
     .links__footer--item {
@@ -385,23 +425,27 @@ header.scroll {
 .about-me {
     color: var(--font-darkbg);
     position: absolute;
-    top: 630px;
+    top: 100vh;
     left: 15%;
     height: 100vh;
     width: 80%;
 }
 
-.about-me__long-bio {
+.about-me__long-bio-container {
     position: absolute;
     top: 180px;
     left: 20px;
     width: 80%;
 }
 
+.about-me__long-bio {
+    padding-bottom: 1rem;
+}
+
 .projects {
     color: var(--font-darkbg);
     position: absolute;
-    top: 930px;
+    top: 200vh;
     left: 20%;
     width: 80%;
     height: 100vh;
@@ -437,7 +481,7 @@ header.scroll {
     background: var(--lighter-main-color);
     padding: 1rem;
     max-width: 40rem;
-    z-index: 999;
+    z-index: 5;
 }
 
 .project-title {
@@ -480,7 +524,7 @@ header.scroll {
     background: var(--ff-primary);
     border-left: 2px solid var(--yellow);
     animation: typing 1.5s steps(9);
-    z-index: 999;
+    z-index: 5;
 }
 
 @keyframes typing {

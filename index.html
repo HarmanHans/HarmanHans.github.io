@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Harman Hans Portfolio Page</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
@@ -17,8 +17,7 @@
         <body>
             <header>
                 <div class="logo">
-                    <p>Asdf</p>
-                    <!--<img src="img/logo.type" alt="">-->
+                    <!--<img src="img/logo.type" alt=""> If I get one-->
                 </div>
                 <a href="#" class="nav-toggle">
                     <span class="hamburger"></span>
@@ -59,14 +58,16 @@
             <!-- About me -->
             <section class="about-me" id="about">
                 <h1 class="section__title section__title--aboutme">About Me</h1>
-                <p class="about-me__long-bio"> My name is Harman and one of the things I really took to when I was taking prerequisites for my eventual major - Geography: Data 
-                    Science - was coding. Within my major, the classes that really stood out to me were the ones where we worked with Python and R to visualize data, as well as 
-                    the opportunity to learn machine learning. In my time outside of major, I took more coding classes - being able to expand on my knowledge of Java and JavaScript.
-                </p>
-                <p> Following college, I've taken more time to develop my coding skills and apply them to my personal life. This includes developing a tool to analyze the 
-                    well-roundedness of an NBA player's counting stats to help myself in a fantasy basketball league I was in at the time. Or developing a bot that interacted 
-                    with viewers in my friends Twitch chat, after noticing that they would always request links to the game he was playing but have trouble finding one oftentimes.
-                </p>
+                <div class="about-me__long-bio-container">
+                    <p class="about-me__long-bio"> My name is Harman and one of the things I really took to when I was taking prerequisites for my eventual major - Geography: Data 
+                        Science - was coding. Within my major, the classes that really stood out to me were the ones where we worked with Python and R to visualize data, as well as 
+                        the opportunity to learn machine learning. In my time outside of major, I took more coding classes - being able to expand on my knowledge of Java and JavaScript.
+                    </p>
+                    <p class="about-me__long-bio"> Following college, I've taken more time to develop my coding skills and apply them to my personal life. This includes developing a tool to analyze the 
+                        well-roundedness of an NBA player's counting stats to help myself in a fantasy basketball league I was in at the time. Or developing a bot that interacted 
+                        with viewers in my friends Twitch chat, after noticing that they would always request links to the game he was playing but have trouble finding one oftentimes.
+                    </p>
+                </div>
             </section>
 
             <!-- Projects -->
@@ -144,6 +145,12 @@
                 </ul>
             </section>
 
+            <!-- Contact -->
+            <div class="contact" id="contact">
+                <h1 class="section__title section__title--contact">Contact</h1>
+                <p class="contact-notes">Feel free to reach out! I'm open to any working opportunities as well as other inquiries.</p>
+                <a href="mailto:harmanhans56@gmail.com" class="contact-mail">Get in touch!</a>
+            </div>
 
             <!-- Footer -->
             <div class="links__footer">
