@@ -287,6 +287,23 @@ header.scroll {
         max-height: 1.4rem;
         max-width: 1.4rem;
     }
+
+    .about-me {
+        left: 3% !important;
+    }
+
+    .about-me__long-bio-container {
+        width: 94% !important;
+    }
+
+    .projects {
+        left: 3% !important;
+    }
+
+    .grid_right .project-display, .grid_right a, .grid_right a img, .grid_right .project-notes-container {
+        width: 380px !important;
+        position: relative;
+    }
 }
 
 @media (min-width: 631px) and (max-width: 1000px) {
@@ -328,7 +345,7 @@ header.scroll {
     .links__footer, .links__footer--item {
         display: inline-block;
         align-self: center;
-        top: 315rem;
+        top: 55rem;
     }
 
     .links__footer--item {
@@ -343,22 +360,29 @@ header.scroll {
 
 @media (max-width: 999px) {
 
-    
-    .grid_right .project-display, .grid_right a, .grid_right a img, .grid_right .project-notes {
+    .project-notes {
+        background: none !important;
+    }
+
+    .grid_right .project-display, .grid_right a, .grid_right a img, .grid_right .project-notes-container {
         width: 400px;
         position: relative;
     }
 
-    .grid_right .project-notes {
+    .grid_right .project-display {
+        min-height: 300px;
+    }
+
+    .grid_right .project-notes-container {
         position: absolute;
         top: 0;
-        min-height: 282.2;
-        background-color: rgba(32, 32, 32, .85);
+        min-height: 282.2px;
+        background-color: rgba(32, 32, 32, .95);
     }
 
     .grid_right .project-title {
         position: absolute;
-        top: -3%;
+        top: -7%;
     }
 
     .grid_right .project-tech-list {
@@ -378,14 +402,14 @@ header.scroll {
     .grid_left {
         position: relative;
     }
-    .grid_left .project-display, .grid_left a, .grid_left a img, .grid_left .project-notes {
+    .grid_left .project-display, .grid_left a, .grid_left a img, .grid_left .project-notes-container {
         width: 336px;
     }
 
-    .grid_left .project-notes {
+    .grid_left .project-notes-container {
         position: absolute;
         top: 0;
-        min-height: 299;
+        min-height: 299px;
         background-color: rgba(32, 32, 32, .85);
     }
 
@@ -577,10 +601,17 @@ header.scroll {
     top: 180px;
     left: 20px;
     width: 80%;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.about-me__long-bio-container p {
+    margin: 10px;
+    padding: 1rem;
 }
 
 .about-me__long-bio {
-    padding-bottom: 1rem;
+    padding-bottom: 5rem;
+    background: var(--lighter-main-color);
 }
 
 .projects {
