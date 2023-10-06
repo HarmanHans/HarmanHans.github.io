@@ -494,7 +494,7 @@ header.scroll {
 .intro {
     position: absolute;
     display: flex;
-    top: 0;
+    top: 15%;
     left: 8%;
     min-height: 600px;
     max-height: 80rem;
@@ -506,7 +506,11 @@ header.scroll {
     color: var(--font-darkbg);
     position: absolute;
     top: 190px;
-    animation: text-shadow 1.5s ease-in-out infinite;
+    
+}
+
+.animation {
+    animation: text-shadow 2s ease-in-out infinite;
 }
 
 .section__title {
@@ -737,5 +741,37 @@ h3 {
         animation: none !important;
         transition: none !important;
       }
+}
+
+/* toggle */
+.invisible {
+    visibility: hidden;
+}
+
+.nav__item--about {
+    animation: drop-in 300ms ease-in;
+}
+
+.nav__item--projects {
+    animation: drop-in 300ms ease-in 300ms;
+}
+
+.nav__item--contact {
+    animation: drop-in 300ms ease-in 600ms;
+}
+
+.nav__item--resume {
+    animation: drop-in 300ms ease-in 900ms;
+}
+
+@keyframes drop-in {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
     
