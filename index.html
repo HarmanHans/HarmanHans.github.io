@@ -14,6 +14,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200&display=swap" rel="stylesheet">
+        <script defer src="app.js"></script>
+    </head>
         <body>
             <header>
                 <div class="logo">
@@ -26,30 +28,30 @@
                 </a>
                 <nav class="navbar"> 
                     <ul class="nav__list">
-                        <li class="nav__item nav__item--about"><a href="#about" class="nav__link">About me</a></li>
-                        <li class="nav__item nav__item--projects"><a href="#projects" class="nav__link">Projects</a></li>
-                        <li class="nav__item nav__item--contact"><a href="#" class="nav__link">Contact</a></li>
-                        <li class="nav__item nav__item--resume"><a href="#" class="nav__button">Resume</a></li>
+                        <li class="nav__item nav__item--about invisible"><a href="#about" class="nav__link">About me</a></li>
+                        <li class="nav__item nav__item--projects invisible"><a href="#projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item nav__item--contact invisible"><a href="#" class="nav__link">Contact</a></li>
+                        <li class="nav__item nav__item--resume invisible"><a href="#" class="nav__button">Resume</a></li>
                     </ul>  
                 </nav>
             </header>
 
             <!-- Intro -->
             <section class="intro">
-                <h1 class="section__title section__title--intro">
+                <h1 class="section__title section__title--intro disappear">
                     Welcome!
                 </h1>
                 <div class="secondary-intro-container">
-                    <h2 class="section__title section__title--heading">My name is</h2>
-                    <h2 class="section__title section__title--style">{Harman}</h2>
+                    <h2 class="section__title section__title--heading slides invisible">My name is</h2>
+                    <h2 class="section__title section__title--style slides invisible">{Harman}</h2>
                 </div>
-                <p class="quick-bio"> I graduated from the University of Washington with a degree in Data Science from the school of Geography and a minor in Diversity from the American Ethnic Studies department.</p>
+                <p class="quick-bio slides invisible"> I graduated from the University of Washington with a degree in Data Science from the school of Geography and a minor in Diversity from the American Ethnic Studies department.</p>
 
             </section>
 
                 <!-- Links -->
             <div class="links">
-                <ul class="links__list">
+                <ul class="links__list invisible">
                     <li class="links__item"><a href="https://github.com/HarmanHans"><img src="/assets/github-logo.png" alt="Github Icon"></a></li>
                     <li class="links__item"><a href="https://www.linkedin.com/in/harman-hans/"><img src="/assets/linkedin-logo.png"></a></li>
                     <li class="links__item"><a href="mailto:harmanhans56@gmail.com"><img src="/assets/email-icon.png"></a></li>
@@ -59,13 +61,13 @@
 
             <!-- About me -->
             <section class="about-me" id="about">
-                <h1 class="section__title section__title--aboutme">About Me</h1>
+                <h1 class="section__title section__title--aboutme disappear">About Me</h1>
                 <div class="about-me__long-bio-container">
-                    <p class="about-me__long-bio"> My name is Harman and one of the things I really took to when I was taking prerequisites for my eventual major - Geography: Data 
+                    <p class="about-me__long-bio slides invisible"> My name is Harman and one of the things I really took to when I was taking prerequisites for my eventual major - Geography: Data 
                         Science - was coding. Within my major, the classes that really stood out to me were the ones where we worked with Python and R to visualize data, as well as 
                         the opportunity to learn machine learning. In my time outside of major, I took more coding classes - being able to expand on my knowledge of Java and JavaScript.
                     </p>
-                    <p class="about-me__long-bio"> Following college, I've taken more time to develop my coding skills and apply them to my personal life. This includes developing a tool to analyze the 
+                    <p class="about-me__long-bio slides invisible"> Following college, I've taken more time to develop my coding skills and apply them to my personal life. This includes developing a tool to analyze the 
                         well-roundedness of an NBA player's counting stats to help myself in a fantasy basketball league I was in at the time. Or developing a bot that interacted 
                         with viewers in my friends Twitch chat, after noticing that they would always request links to the game he was playing but have trouble finding one oftentimes.
                     </p>
@@ -74,9 +76,9 @@
 
             <!-- Projects -->
             <section class="projects" id="projects">
-                <h1 class="section__title section__title--projects">Projects</h1>
+                <h1 class="section__title section__title--projects disappear">Projects</h1>
                 <ul class="projects__grid">
-                    <li class="projects_grid_item">
+                    <li class="projects_grid_item slides invisible">
                         <div class="grid_right">
                             <div class="project-display">
                                 <a href="https://fbbcalculator.onrender.com/">
@@ -112,7 +114,7 @@
                         </div>
                     </li>
 
-                    <li class="projects_grid_item">
+                    <li class="projects_grid_item slides invisible">
                         <div class="grid_left">
                             <div class="project-display">
                                 <a href="https://imgur.com/a/ya8ommV">
@@ -150,8 +152,8 @@
             <!-- Contact -->
             <section class="contact" id="contact">
                 <h1 class="section__title section__title--contact">Contact</h1>
-                <p class="contact-notes">Feel free to reach out! I'm open to any working opportunities as well as other inquiries.</p>
-                <a href="mailto:harmanhans56@gmail.com" class="contact-mail">Get in touch!</a>
+                <p class="contact-notes slides invisible">Feel free to reach out! I'm open to any working opportunities as well as other inquiries.</p>
+                <a href="mailto:harmanhans56@gmail.com" class="contact-mail slides invisible">Get in touch!</a>
             </section>
 
             <!-- Footer -->
@@ -164,7 +166,5 @@
                 </ul>
             </div>
         </body>
-
-    </head>
-    <script src="app.js"></script>
+    
 </html>

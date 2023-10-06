@@ -8,6 +8,7 @@
     --pink: #F1AFED;
     --powder-blue: #66F5FF;
     --left-spacing: 20%;
+    --intro-spacing: 8%;
 }
 
 * {
@@ -33,6 +34,7 @@ body {
     flex-direction: column;
     font-size: var(--fs-body);
     position: relative;
+    max-height: 320rem;
 }
 
 section {
@@ -53,7 +55,7 @@ header {
 
 header.scroll {
     position: fixed;
-    top: -4rem;
+    top: -12rem;
     left: 0;
     width: 100%;
     height: 4rem;
@@ -326,20 +328,22 @@ header.scroll {
     .links__footer, .links__footer--item {
         display: inline-block;
         align-self: center;
-        top: 320vh;
+        top: 315rem;
     }
 
     .links__footer--item {
         position: relative;
         margin-right: 1rem;
     }
+
+    .links__footer--list {
+        align-self: center;
+    }
 }
 
 @media (max-width: 999px) {
 
-    .contact {
-        left: 10%;
-    }
+    
     .grid_right .project-display, .grid_right a, .grid_right a img, .grid_right .project-notes {
         width: 400px;
         position: relative;
@@ -485,6 +489,13 @@ header.scroll {
     }
 }
 
+@media (min-width: 1100px) {
+    :root {
+        --intro-spacing: 25%;
+    }
+    
+}
+
 @media (min-width: 1200px) {
     :root {
         --space-left: 50%,
@@ -495,7 +506,7 @@ header.scroll {
     position: absolute;
     display: flex;
     top: 15%;
-    left: 8%;
+    left: var(--intro-spacing);
     min-height: 600px;
     max-height: 80rem;
     width: 80%;
@@ -510,7 +521,8 @@ header.scroll {
 }
 
 .animation {
-    animation: text-shadow 2s ease-in-out infinite;
+    animation: text-shadow 1.5s ease-in-out;
+    opacity: 1;
 }
 
 .section__title {
@@ -648,25 +660,6 @@ header.scroll {
     animation-fill-mode: forwards;
 }*/
 
-.section__title--aboutme::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    background: var(--ff-primary);
-    border-left: 2px solid var(--yellow);
-    animation: typing 1.5s steps(9);
-    z-index: 5;
-}
-
-@keyframes typing {
-    100%{
-        left: 100%;
-        margin: 0 -45px 0 5px;
-    }
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -690,7 +683,8 @@ h3 {
 }
 
 @keyframes text-shadow {
-    0% {  
+    0% {
+        opacity: 0;  
         transform: translateY(0);
         text-shadow: 
             0 0 0 #0c2ffb, 
@@ -734,6 +728,10 @@ h3 {
             0 0 0 #fb203b, 
             0 0 0 #fefc4b;
     }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -743,25 +741,44 @@ h3 {
       }
 }
 
+
 /* toggle */
 .invisible {
-    visibility: hidden;
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
 }
 
-.nav__item--about {
+.disappear {
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 2s;
+}
+
+.drop-in:nth-child(2) {
+    transition-delay:  100ms;
+}
+
+.drop-in:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.drop-in:nth-child(4) {
+    transition-delay: 300ms;
+}
+
+/* toggle */
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.drop-in {
     animation: drop-in 300ms ease-in;
 }
 
-.nav__item--projects {
-    animation: drop-in 300ms ease-in 300ms;
-}
-
-.nav__item--contact {
-    animation: drop-in 300ms ease-in 600ms;
-}
-
-.nav__item--resume {
-    animation: drop-in 300ms ease-in 900ms;
+.slide-up {
+    animation: slide-up 600ms ease-in;
 }
 
 @keyframes drop-in {
@@ -774,4 +791,12 @@ h3 {
         opacity: 1;
     }
 }
-    
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
