@@ -809,7 +809,7 @@ h3 {
 }
 
 .slide-up {
-    animation: slide-up 600ms ease-in;
+    animation: slide-up 500ms ease-in;
 }
 
 @keyframes drop-in {
