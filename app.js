@@ -5,6 +5,9 @@ const titles = document.querySelectorAll('h1.section__title');
 
 let prevScrollPos = window.pageYOffset + 70;
 
+if (window.innerWidth <= 630) {
+    navBar.classList.add('hide');
+}
 window.addEventListener('scroll', hideNav);
 
 /*for (let i = 0; i < titles.length; i++) {
@@ -15,6 +18,9 @@ function hideNav() {
     let currentScrollPos = window.pageYOffset;
 
     prevScrollPos > currentScrollPos ? header.classList.remove('scroll') : header.classList.add('scroll');
+    if (prevScrollPos < currentScrollPos) {
+        navBar.classList.add('hide');
+    }
     prevScrollPos = currentScrollPos;
 }
 

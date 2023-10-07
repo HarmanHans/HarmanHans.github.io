@@ -289,7 +289,7 @@ header.scroll {
     }
 
     .about-me {
-        left: 3% !important;
+        left: 6% !important;
     }
 
     .about-me__long-bio-container {
@@ -297,7 +297,8 @@ header.scroll {
     }
 
     .projects {
-        left: 3% !important;
+        left: 5% !important;
+        width: 90% !important;
     }
 
     .grid_right .project-display, .grid_right a, .grid_right a img, .grid_right .project-notes-container {
