@@ -305,6 +305,10 @@ header.scroll {
         width: 380px !important;
         position: relative;
     }
+
+    .about-me, .contact {
+        align-self: center;
+    }
 }
 
 @media (min-width: 631px) and (max-width: 1000px) {

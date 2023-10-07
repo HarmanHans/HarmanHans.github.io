@@ -18,7 +18,7 @@ function hideNav() {
     let currentScrollPos = window.pageYOffset;
 
     prevScrollPos > currentScrollPos ? header.classList.remove('scroll') : header.classList.add('scroll');
-    if (prevScrollPos < currentScrollPos) {
+    if (prevScrollPos < currentScrollPos && window.innerWidth <= 630) {
         navBar.classList.add('hide');
     }
     prevScrollPos = currentScrollPos;
