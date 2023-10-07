@@ -300,6 +300,10 @@ header.scroll {
         left: 5% !important;
         width: 90% !important;
     }
+    
+    .contact {
+        left: 10% !important;
+    }
 
     .grid_right .project-display, .grid_right a, .grid_right a img, .grid_right .project-notes-container {
         width: 380px !important;
