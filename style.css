@@ -313,6 +313,10 @@ header.scroll {
     .about-me, .contact {
         align-self: center;
     }
+
+    .grid_right .project-links, .grid_left .project-links {
+        max-width: 100px !important;
+    }
 }
 
 @media (min-width: 631px) and (max-width: 1000px) {
@@ -503,7 +507,7 @@ header.scroll {
     .grid_left .project-links {
         position: absolute;
         top: 35%;
-        left: 2%;
+        left: -4%;
     }
 
     .grid_left .project-tech-list {
